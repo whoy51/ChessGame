@@ -1,6 +1,6 @@
 import java.awt.Color;
 
-public class Bishop extends Piece{
+public class Bishop extends Piece {
 
     public Bishop(int row, int col, boolean whi) {
         super(row, col, whi);
