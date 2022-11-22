@@ -1,5 +1,3 @@
-package Chess;
-
 public class Piece {
     public int[] coords = new int[2];
     public boolean eaten = false;
