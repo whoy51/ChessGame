@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Queen extends Piece{
 
     public Queen(int row, int col, boolean whi) {
