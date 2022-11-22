@@ -30,5 +30,9 @@ public class ChessGame {
         Bishop whiteBishop2 = new Bishop(1,6,true);
         Bishop blackBishop1 = new Bishop(8,3,false);
         Bishop blackBishop2 = new Bishop(8,6,false);
+        King whiteKing = new King(1,5,true);
+        King blackKing = new King(8,5,false);
+        Queen whiteQueen = new Queen(1,4,true);
+        Queen blackQueen = new Queen(8,4,false);
     }
 }
