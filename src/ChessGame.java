@@ -66,9 +66,6 @@ public class ChessGame {
         all[1][13]= blackBishop2;
         all[1][14]= blackKing;
         all[1][15]= blackQueen;
-        whitePawn5.move(5,3);
-        whitePawn5.move(5,5);
-        whiteKnight1.move(3, 3);
-        whiteKnight2.move(6,3);
+        whiteBishop1.move(3,3);
     }
 }

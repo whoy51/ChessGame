@@ -9,7 +9,7 @@ public class Piece {
 
     }
     public void move(int col, int row){
-        System.out.println("Tryna move to " + col + ", " + row);
+        System.out.println("Trying to move to " + col + ", " + row);
         if (this.canMove(col, row)){
             int[] oldC = {coords[0],coords[1]};
             coords[0] = col;
