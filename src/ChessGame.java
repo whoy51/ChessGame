@@ -1,3 +1,4 @@
+import javax.swing.plaf.synth.SynthDesktopIconUI;
 import java.awt.*;
 
 public class ChessGame {
@@ -81,7 +82,16 @@ public class ChessGame {
 //            }
 //        }
         while (true){
-            selectTile();
+            if (StdDraw.isMousePressed() && !mousePressed){
+                mousePressed = true;
+                selectTile();
+            } else if (!StdDraw.isMousePressed() && mousePressed) {
+                mousePressed = false;
+            }
+            else if (mousePressed) {
+                // hold stuff
+            }
+
         }
 
     }
