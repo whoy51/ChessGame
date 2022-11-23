@@ -12,9 +12,9 @@ public class King extends Piece{
             StdDraw.setPenColor(Color.BLACK);
         }
         if (StdDraw.getPenColor() == Color.WHITE) {
-            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/king_white.jpg", 0.1, 0.1);
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Ollie.jpg", 0.1, 0.1);
         } else {
-            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/king_black.jpg", 0.1, 0.1);
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Luther.jpg", 0.1, 0.1);
         }
 
     }

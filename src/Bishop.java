@@ -23,7 +23,7 @@ public class Bishop extends Piece{
                 int deltaX = (coords[0] - col > 0)? 1: -1;
                 int deltaY = (coords[1] - col > 0)? 1: -1;
                 for (int j = Math.abs(coords[0] - col) ; j > 0; j--) {
-                    int[] checker = {col - (j * deltaX), row - (j * deltaY)};
+                    int[] checker = {coords[0] - (j * deltaX), coords[1] - (j * deltaY)};
                     //System.out.println("Checking " + checker[0] + ", " + checker[1]);
                     if (ChessGame.all[white? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white? 0 : 1][i].coords[1] == checker[1]){
                         occupied = true;
