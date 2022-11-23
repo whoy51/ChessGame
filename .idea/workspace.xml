@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="SelectTile Works!">
+    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="We have click Movement def works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChessGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669234815766</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="We have click Movement def works">
+      <created>1669237332225</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669237332225</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +166,7 @@
     <MESSAGE value="Add pictures for king and queen" />
     <MESSAGE value="Test" />
     <MESSAGE value="SelectTile Works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="SelectTile Works!" />
+    <MESSAGE value="We have click Movement def works" />
+    <option name="LAST_COMMIT_MESSAGE" value="We have click Movement def works" />
   </component>
 </project>

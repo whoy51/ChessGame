@@ -107,11 +107,13 @@ public class ChessGame {
         int row = (int) (StdDraw.mouseY * 8) + 1;
         boolean success = false;
         if ((selectedTile[0] + selectedTile[1]) % 2 == 0){
+            System.out.println("Erasing selected");
             StdDraw.setPenColor(new Color(128, 64, 0));
         } else {
+            System.out.println("Erasing selected");
             StdDraw.setPenColor(new Color(255, 204, 153));
         }
-        StdDraw.filledSquare(selectedTile[0] / 8.0 + 1/16.0, selectedTile[1] / 8.0 + 1/16.0, 1/16.0);
+        StdDraw.filledSquare(selectedTile[0] / 8.0 - 1/16.0, selectedTile[1] / 8.0 - 1/16.0, 1/16.0);
         for (int i = 0; i < 2; i++){
             for (int j = 0; j < 16; j++){
                 if (all[i][j].coords[0] == selectedTile[0] && all[i][j].coords[1] == selectedTile[1]){
