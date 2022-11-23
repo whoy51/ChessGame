@@ -1,4 +1,3 @@
-import javax.swing.plaf.synth.SynthDesktopIconUI;
 import java.awt.*;
 
 public class ChessGame {
