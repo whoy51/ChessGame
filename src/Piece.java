@@ -8,7 +8,7 @@ public class Piece {
     public void draw(){
 
     }
-    public void move(int col, int row){
+    public boolean move(int col, int row){
         System.out.println("Trying to move to " + col + ", " + row);
         if (this.canMove(col, row)){
             int[] oldC = {coords[0],coords[1]};
@@ -21,6 +21,9 @@ public class Piece {
             }
             StdDraw.filledSquare(oldC[0] / 8.0 - 1 / 16.0, oldC[1] / 8.0 - 1 / 16.0, 1/16.0);
             this.draw();
+            return true;
+        } else {
+            return false;
         }
     }
     public boolean canMove(int col, int row){

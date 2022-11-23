@@ -73,18 +73,14 @@ public class ChessGame {
         all[1][14]= blackKing;
         all[1][15]= blackQueen;
         //whiteBishop1.move(3,3);
-        System.out.println("Ready");
-//        while(!selected){
-//            if (!mousePressed && StdDraw.isMousePressed && !selected){
-//                System.out.println("test");
-//                mousePressed = true;
-//                ChessGame.selectTile();
-//            }
-//        }
         while (true){
             if (StdDraw.isMousePressed() && !mousePressed){
                 mousePressed = true;
-                selectTile();
+                if (selected) {
+                    moveAttempt();
+                } else {
+                    selectTile((int) (StdDraw.mouseX * 8) + 1, (int) (StdDraw.mouseY * 8) + 1);
+                }
             } else if (!StdDraw.isMousePressed() && mousePressed) {
                 mousePressed = false;
             }
@@ -96,12 +92,36 @@ public class ChessGame {
 
     }
 
-    public static void selectTile(){
+    public static void selectTile(int col, int row){
         StdDraw.setPenColor(Color.BLUE);
         StdDraw.setPenRadius(0.004);
-        selectedTile[0] = (int) (StdDraw.mouseX() * 8) + 1;
-        selectedTile[1] = (int) (StdDraw.mouseY() * 8) + 1;
-        StdDraw.square(selectedTile[0]/8.0 - 1/16.0, selectedTile[1]/8.0 - 1/16.0, 1/16.0);
+        selectedTile[0] = col;
+        selectedTile[1] = row;
+        StdDraw.square(selectedTile[0]/8.0 - 1/16.0, selectedTile[1]/8.0 - 1/16.0, 1/16.0 - 0.002);
         selected = true;
+    }
+
+    public static void moveAttempt(){
+        System.out.println("MoveAttempt");
+        int col = (int) (StdDraw.mouseX * 8) + 1;
+        int row = (int) (StdDraw.mouseY * 8) + 1;
+        boolean success = false;
+        if ((selectedTile[0] + selectedTile[1]) % 2 == 0){
+            StdDraw.setPenColor(new Color(128, 64, 0));
+        } else {
+            StdDraw.setPenColor(new Color(255, 204, 153));
+        }
+        StdDraw.filledSquare(selectedTile[0] / 8.0 + 1/16.0, selectedTile[1] / 8.0 + 1/16.0, 1/16.0);
+        for (int i = 0; i < 2; i++){
+            for (int j = 0; j < 16; j++){
+                if (all[i][j].coords[0] == selectedTile[0] && all[i][j].coords[1] == selectedTile[1]){
+                    System.out.println("Found");
+                    success = all[i][j].move(col, row);
+                }
+            }
+        }
+        if (!success){
+            selectTile(col, row);
+        }
     }
 }
