@@ -1,9 +1,9 @@
-import java.awt.*;
+import java.awt.Color;
 
 public class King extends Piece{
 
-    public King(int row, int col, boolean whi) {
-        super(row, col, whi);
+    public King(int col, int row, boolean whi) {
+        super(col, row, whi);
     }
     public void draw(){
         if (white){
@@ -11,10 +11,34 @@ public class King extends Piece{
         } else {
             StdDraw.setPenColor(Color.BLACK);
         }
-        if (StdDraw.getPenColor() == Color.WHITE) {
-            StdDraw.picture(coords[1] / 8.0 + 1 / 16.0, coords[0] / 8.0 + 1 / 16.0, "/resources/king_white.png", 0.1, 0.1);
+        StdDraw.text(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "K");
+    }
+    public boolean canMove(int col, int row){
+        //System.out.println("Testing");
+        if (Math.abs(coords[0] +- col) <= 1 && Math.abs(coords[1] - row) <= 1){
+            boolean occupied = false;
+            for (int i = 0; i < 16; i++){
+                //System.out.println("Check iteration " + i);
+                int[] checker = {col, row};
+                //System.out.println(checker[0] + ", " + checker[1]);
+                //System.out.println(ChessGame.all[white? 0 : 1][i].coords[0] + ", " + ChessGame.all[white? 0 : 1][i].coords[1]);
+                if (ChessGame.all[white? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white? 0 : 1][i].coords[1] == checker[1]){
+                    occupied = true;
+                    //System.out.println("Spot occupied");
+                    break;
+                } else {
+                    occupied = false;
+                }
+            }
+            if (!occupied){
+                System.out.println("Can Move");
+                return true;
+            } else {
+                System.out.println("Cannot Move");
+                return false;
+            }
         } else {
-            StdDraw.picture(coords[1] / 8.0 + 1 / 16.0, coords[0] / 8.0 + 1 / 16.0, "/resources/king_black.png", 0.1, 0.1);
+            return false;
         }
     }
 }

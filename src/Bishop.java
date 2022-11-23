@@ -1,9 +1,9 @@
 import java.awt.Color;
 
-public class Bishop extends Piece {
+public class Bishop extends Piece{
 
-    public Bishop(int row, int col, boolean whi) {
-        super(row, col, whi);
+    public Bishop(int col, int row, boolean whi) {
+        super(col, row, whi);
     } 
     public void draw(){
         if (white){
@@ -11,9 +11,8 @@ public class Bishop extends Piece {
         } else {
             StdDraw.setPenColor(Color.BLACK);
         }
-        double[] x = {coords[1] / 8.0 + 1 / 16.0 - 0.02,coords[1] / 8.0 + 1 / 16.0,coords[1] / 8.0 + 1 / 16.0 + 0.02, coords[1] / 8.0 + 1 / 16.0};
-        double[] y = {coords[0] / 8.0 + 1 / 16.0,coords[0] / 8.0 + 1 / 16.0 - 0.02,coords[0] / 8.0 + 1 / 16.0, coords[0] / 8.0 + 1 / 16.0 + 0.02};
+        double[] x = {coords[0] / 8.0 -1 / 16.0 - 0.02,coords[0] / 8.0 -1 / 16.0,coords[0] / 8.0 -1 / 16.0 + 0.02, coords[0] / 8.0 -1 / 16.0};
+        double[] y = {coords[1] / 8.0 -1 / 16.0,coords[1] / 8.0 -1 / 16.0 - 0.02,coords[1] / 8.0 -1 / 16.0, coords[1] / 8.0 -1 / 16.0 + 0.02};
         StdDraw.filledPolygon(x, y);
-        System.out.println("Drew Bishop");
     }  
 }
