@@ -1,9 +1,10 @@
 import javax.swing.plaf.synth.SynthDesktopIconUI;
 import java.awt.*;
+import java.util.*;
 
 public class ChessGame {
     public static Piece[][] all = new Piece[2][16];
-    public static int[] selectedTile = new int[2];
+    public static int[] selectedTile = {-1,-1};
     public static boolean mousePressed = false;
     public static boolean selected = false;
     public static void main(String[] args) {
@@ -93,6 +94,23 @@ public class ChessGame {
     }
 
     public static void selectTile(int col, int row){
+        if (selectedTile[0] != -1){
+            if ((selectedTile[0] + selectedTile[1]) % 2 == 0){
+                //System.out.println("Erasing selected");
+                StdDraw.setPenColor(new Color(128, 64, 0));
+            } else {
+                //System.out.println("Erasing selected");
+                StdDraw.setPenColor(new Color(255, 204, 153));
+            }
+            StdDraw.filledSquare(selectedTile[0] / 8.0 - 1/16.0, selectedTile[1] / 8.0 - 1/16.0, 1/16.0);
+            for (int i = 0; i < 2; i++){
+                for (int j = 0; j < 16; j++){
+                    if (all[i][j].coords[0] == selectedTile[0] && all[i][j].coords[1] == selectedTile[1]){
+                        all[i][j].draw();
+                    }
+                }
+            }
+        }
         StdDraw.setPenColor(Color.BLUE);
         StdDraw.setPenRadius(0.004);
         selectedTile[0] = col;
@@ -106,14 +124,6 @@ public class ChessGame {
         int col = (int) (StdDraw.mouseX * 8) + 1;
         int row = (int) (StdDraw.mouseY * 8) + 1;
         boolean success = false;
-        if ((selectedTile[0] + selectedTile[1]) % 2 == 0){
-            System.out.println("Erasing selected");
-            StdDraw.setPenColor(new Color(128, 64, 0));
-        } else {
-            System.out.println("Erasing selected");
-            StdDraw.setPenColor(new Color(255, 204, 153));
-        }
-        StdDraw.filledSquare(selectedTile[0] / 8.0 - 1/16.0, selectedTile[1] / 8.0 - 1/16.0, 1/16.0);
         for (int i = 0; i < 2; i++){
             for (int j = 0; j < 16; j++){
                 if (all[i][j].coords[0] == selectedTile[0] && all[i][j].coords[1] == selectedTile[1]){

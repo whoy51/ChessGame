@@ -6,6 +6,12 @@ public class Bishop extends Piece{
         super(col, row, whi);
     } 
     public void draw(){
+        if ((coords[0] + coords[1]) % 2 == 0){
+            StdDraw.setPenColor(new Color(128, 64, 0));
+        } else {
+            StdDraw.setPenColor(new Color(255, 204, 153));
+        }
+        StdDraw.filledSquare(coords[0] / 8.0 - 1/16.0, coords[1] / 8.0 - 1/16.0, 1/16.0);
         if (white){
             StdDraw.setPenColor(Color.WHITE);
         } else {
