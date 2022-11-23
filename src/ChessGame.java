@@ -1,5 +1,8 @@
 public class ChessGame {
     public static Piece[][] all = new Piece[2][16];
+    public static int[] selectedTile = new int[2];
+    public static boolean mousePressed = false;
+    public static boolean selected = false;
     public static void main(String[] args) {
         Board.init();
         Pawn whitePawn1 = new Pawn(1,2,true);
@@ -66,6 +69,22 @@ public class ChessGame {
         all[1][13]= blackBishop2;
         all[1][14]= blackKing;
         all[1][15]= blackQueen;
-        whiteBishop1.move(3,3);
+        //whiteBishop1.move(3,3);
+        System.out.println("Ready");
+        while(!selected){
+            if (!mousePressed && StdDraw.isMousePressed && !selected){
+                System.out.println("test");
+                mousePressed = true;
+                ChessGame.selectTile();
+            }
+        }
+    }
+
+    public static void selectTile(){
+        System.out.println("firing");
+        selectedTile[0] = (int) (StdDraw.mouseX() * 8) + 1;
+        selectedTile[1] = (int) (StdDraw.mouseY() * 8) + 1;
+        StdDraw.square(selectedTile[0], selectedTile[1], 1/16.0);
+        selected = true;
     }
 }
