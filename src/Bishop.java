@@ -14,5 +14,6 @@ public class Bishop extends Piece {
         double[] x = {coords[1] / 8.0 + 1 / 16.0 - 0.02,coords[1] / 8.0 + 1 / 16.0,coords[1] / 8.0 + 1 / 16.0 + 0.02, coords[1] / 8.0 + 1 / 16.0};
         double[] y = {coords[0] / 8.0 + 1 / 16.0,coords[0] / 8.0 + 1 / 16.0 - 0.02,coords[0] / 8.0 + 1 / 16.0, coords[0] / 8.0 + 1 / 16.0 + 0.02};
         StdDraw.filledPolygon(x, y);
+        System.out.println("Drew Bishop");
     }  
 }
