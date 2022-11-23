@@ -12,6 +12,11 @@ public class Pawn extends Piece{
             StdDraw.setPenColor(Color.BLACK);
         }
         StdDraw.filledCircle(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, 0.02);
+        if (StdDraw.getPenColor() == Color.WHITE) {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Juan.jpg", 0.1, 0.1);
+        } else {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Wesley.jpg", 0.1, 0.1);
+        }
     }
     // public boolean canMove(int col, int row){
     //     if (Math.abs(coords[0] - col) == 0 && Math.abs(coords[1] - row) == 1){

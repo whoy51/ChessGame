@@ -11,7 +11,12 @@ public class King extends Piece{
         } else {
             StdDraw.setPenColor(Color.BLACK);
         }
-        StdDraw.text(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "K");
+        if (StdDraw.getPenColor() == Color.WHITE) {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/king_white.jpg", 0.1, 0.1);
+        } else {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/king_black.jpg", 0.1, 0.1);
+        }
+
     }
     public boolean canMove(int col, int row){
         //System.out.println("Testing");
