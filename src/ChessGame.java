@@ -1,3 +1,4 @@
+import javax.swing.plaf.synth.SynthDesktopIconUI;
 import java.awt.*;
 
 public class ChessGame {
@@ -96,11 +97,11 @@ public class ChessGame {
     }
 
     public static void selectTile(){
-        System.out.println("firing");
         StdDraw.setPenColor(Color.BLUE);
-        selectedTile[0] = (int) (StdDraw.mouseX() * 16) + 1;
-        selectedTile[1] = (int) (StdDraw.mouseY() * 16) + 1;
-        StdDraw.square(selectedTile[0], selectedTile[1], 1/16.0);
+        StdDraw.setPenRadius(0.004);
+        selectedTile[0] = (int) (StdDraw.mouseX() * 8) + 1;
+        selectedTile[1] = (int) (StdDraw.mouseY() * 8) + 1;
+        StdDraw.square(selectedTile[0]/8.0 - 1/16.0, selectedTile[1]/8.0 - 1/16.0, 1/16.0);
         selected = true;
     }
 }

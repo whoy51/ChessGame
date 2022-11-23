@@ -636,9 +636,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     private static JFrame frame;
 
     // mouse state
-    private static boolean isMousePressed = false;
-    private static double mouseX = 0;
-    private static double mouseY = 0;
+    public static boolean isMousePressed = false;
+    public static double mouseX = 0;
+    public static double mouseY = 0;
 
     // queue of typed key characters
     private static LinkedList<Character> keysTyped;
