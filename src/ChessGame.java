@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class ChessGame {
     public static Piece[][] all = new Piece[2][16];
     public static int[] selectedTile = new int[2];
@@ -71,19 +73,24 @@ public class ChessGame {
         all[1][15]= blackQueen;
         //whiteBishop1.move(3,3);
         System.out.println("Ready");
-        while(!selected){
-            if (!mousePressed && StdDraw.isMousePressed && !selected){
-                System.out.println("test");
-                mousePressed = true;
-                ChessGame.selectTile();
-            }
+//        while(!selected){
+//            if (!mousePressed && StdDraw.isMousePressed && !selected){
+//                System.out.println("test");
+//                mousePressed = true;
+//                ChessGame.selectTile();
+//            }
+//        }
+        while (true){
+            selectTile();
         }
+
     }
 
     public static void selectTile(){
         System.out.println("firing");
-        selectedTile[0] = (int) (StdDraw.mouseX() * 8) + 1;
-        selectedTile[1] = (int) (StdDraw.mouseY() * 8) + 1;
+        StdDraw.setPenColor(Color.BLUE);
+        selectedTile[0] = (int) (StdDraw.mouseX() * 16) + 1;
+        selectedTile[1] = (int) (StdDraw.mouseY() * 16) + 1;
         StdDraw.square(selectedTile[0], selectedTile[1], 1/16.0);
         selected = true;
     }
