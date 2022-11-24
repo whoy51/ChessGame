@@ -4,6 +4,7 @@ public class Bishop extends Piece{
 
     public Bishop(int col, int row, boolean whi) {
         super(col, row, whi);
+        draw();
     } 
     public void draw(){
         if ((coords[0] + coords[1]) % 2 == 0){
@@ -23,6 +24,9 @@ public class Bishop extends Piece{
     }
     public boolean canMove(int col, int row){
         //System.out.println("Testing");
+        if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
+            return false;
+        }
         if (Math.abs(coords[0] - col) == Math.abs(coords[1] - row)){
             boolean occupied = false;
             for (int i = 0; i < 16; i++){

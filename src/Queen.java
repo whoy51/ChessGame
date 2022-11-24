@@ -4,6 +4,7 @@ public class Queen extends Piece{
 
     public Queen(int col, int row, boolean whi) {
         super(col, row, whi);
+        draw();
     }
     public void draw(){
         if ((coords[0] + coords[1]) % 2 == 0){

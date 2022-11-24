@@ -49,6 +49,5 @@ public class Piece {
         coords[0] = col;
         coords[1] = row;
         white = whi;
-        this.draw();
     }
 }

@@ -4,6 +4,7 @@ public class Knight extends Piece{
 
     public Knight(int col, int row, boolean whi) {
         super(col, row, whi);
+        draw();
     }
     public void draw(){
         if ((coords[0] + coords[1]) % 2 == 0){

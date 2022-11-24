@@ -4,6 +4,7 @@ public class Rook extends Piece{
 
     public Rook(int col, int row, boolean whi) {
         super(col, row, whi);
+        draw();
     }
     public void draw(){
         if ((coords[0] + coords[1]) % 2 == 0){
