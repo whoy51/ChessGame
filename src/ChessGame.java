@@ -10,6 +10,7 @@ public class ChessGame {
     public static Turn turn = Turn.WHITE;
 
     public static void main(String[] args) {
+        StdDraw.setTitle("Turn: White");
         Board.init();
         Pawn whitePawn1 = new Pawn(1,2,true);
         Pawn whitePawn2 = new Pawn(2,2,true);
