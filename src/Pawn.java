@@ -23,12 +23,42 @@ public class Pawn extends Piece{
         }
         if (tryMove(col, row)){
             if (row == 8 && white){
+                NewPiece piece = Board.promptUser(true);
+                if (piece == NewPiece.QUEEN) {
+                    ChessGame.all[0][col - 1] = new Queen(col, row, true);
+                }
+                else if (piece == NewPiece.ROOK) {
+                    ChessGame.all[0][col - 1] = new Rook(col, row, true);
+                }
+                else if (piece == NewPiece.KNIGHT) {
+                    ChessGame.all[0][col - 1] = new Knight(col, row, true);
+                }
+                else if (piece == NewPiece.PAWN) {
+                    ChessGame.all[0][col - 1] = new Pawn(col, row, true);
+                }
+                else if (piece == NewPiece.BISHOP) {
+                    ChessGame.all[0][col - 1] = new Bishop(col, row, true);
+                }
                 System.out.println("White conversion");
-                ChessGame.all[0][col - 1] = new Queen(col, row, true);
             }
             if (row == 1 && !white){
+                NewPiece piece = Board.promptUser(false);
                 System.out.println("Black conversion");
-                ChessGame.all[1][col - 1] = new Queen(col, row, false);
+                if (piece == NewPiece.QUEEN) {
+                    ChessGame.all[0][col - 1] = new Queen(col, row, false);
+                }
+                else if (piece == NewPiece.ROOK) {
+                    ChessGame.all[0][col - 1] = new Rook(col, row, false);
+                }
+                else if (piece == NewPiece.KNIGHT) {
+                    ChessGame.all[0][col - 1] = new Knight(col, row, false);
+                }
+                else if (piece == NewPiece.PAWN) {
+                    ChessGame.all[0][col - 1] = new Pawn(col, row, false);
+                }
+                else if (piece == NewPiece.BISHOP) {
+                    ChessGame.all[0][col - 1] = new Bishop(col, row, false);
+                }
             }
             return true;
         }

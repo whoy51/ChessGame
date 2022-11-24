@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="Make Turn its own file" />
+    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="Select color mirrors turn color">
+      <change afterPath="$PROJECT_DIR$/src/NewPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pawn.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +41,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -59,7 +65,14 @@
       <recent name="C:\Users\9258830\IdeaProjects\ChessGame\src\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ChessGame">
+    <configuration name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Board" />
+      <module name="ChessGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChessGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChessGame" />
       <module name="ChessGame" />
@@ -70,6 +83,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ChessGame" />
+        <item itemvalue="Application.Board" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669257932763</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Select color mirrors turn color">
+      <created>1669258388386</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669258388386</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +207,7 @@
     <MESSAGE value="Remove StdDraw main for compiler" />
     <MESSAGE value="Make Turn it's own file" />
     <MESSAGE value="Make Turn its own file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Turn its own file" />
+    <MESSAGE value="Select color mirrors turn color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Select color mirrors turn color" />
   </component>
 </project>
