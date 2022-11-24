@@ -1,9 +1,10 @@
 import java.awt.Color;
+import java.util.*;
+
 
 public class Piece {
-    //Coords is an int array storing column and row in that order ranging from 1 - 8
+    //Coords is an int array storing column and row in that order ranging from 1 to 8
     public int[] coords = new int[2];
-    public boolean eaten = false;
     public boolean white;
     public void draw(){
 
@@ -11,6 +12,14 @@ public class Piece {
     public boolean move(int col, int row){
         System.out.println("Trying to move to " + col + ", " + row);
         if (this.canMove(col, row)){
+            //This takes pieces
+            for (int i = 0; i < 16; i++) {
+                int[] checker = {col, row};
+                if (ChessGame.all[white ? 1 : 0][i].coords[0] == checker[0] && ChessGame.all[white ? 1 : 0][i].coords[1] == checker[1]) {
+                    ChessGame.all[white ? 1 : 0][i].coords[0] = -1;
+                    ChessGame.all[white ? 1 : 0][i].coords[1] = -1;
+                }
+            }
             int[] oldC = {coords[0],coords[1]};
             coords[0] = col;
             coords[1] = row;
