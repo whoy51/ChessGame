@@ -17,12 +17,11 @@ public class Board {
             }
         }
     }
-
     public static NewPiece promptUser(boolean whi){
         final NewPiece[] result = {null};
         JFrame frame = new JFrame();
         frame.setTitle("Select New Piece");
-        frame.setSize(400, 400);
+        frame.setSize(450, 75);
         JPanel panel = new JPanel();
         frame.getContentPane().add(panel);
 
