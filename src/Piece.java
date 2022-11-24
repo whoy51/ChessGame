@@ -3,7 +3,7 @@ import java.util.*;
 
 
 public class Piece {
-    //Coords is an int array storing column and row in that order ranging from 1 - 8
+    //Coords is an int array storing column and row in that order ranging from 1 to 8
     public int[] coords = new int[2];
     public boolean white;
     public void draw(){
