@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="Added turns and pawn conversion work" />
+    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="Remove StdDraw main for compiler">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StdDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StdDraw.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669257027305</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added turn taker to title">
+      <created>1669257273419</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669257273419</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +164,8 @@
     <MESSAGE value="Test" />
     <MESSAGE value="SelectTile Works!" />
     <MESSAGE value="Added turns and pawn conversion work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added turns and pawn conversion work" />
+    <MESSAGE value="Added turn taker to title" />
+    <MESSAGE value="Remove StdDraw main for compiler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove StdDraw main for compiler" />
   </component>
 </project>
