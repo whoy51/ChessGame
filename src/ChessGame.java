@@ -114,7 +114,7 @@ public class ChessGame {
                 }
             }
         }
-        StdDraw.setPenColor(Color.BLUE);
+        StdDraw.setPenColor(turn == Turn.WHITE?Color.WHITE:Color.BLACK);
         StdDraw.setPenRadius(0.004);
         selectedTile[0] = col;
         selectedTile[1] = row;
