@@ -18,9 +18,12 @@ public class Knight extends Piece{
         } else {
             StdDraw.setPenColor(Color.BLACK);
         }
-        double[] x = {coords[0] / 8.0 - 1 / 16.0 - 0.02,coords[0] / 8.0 - 1 / 16.0 + 0.02,coords[0] / 8.0 - 1 / 16.0};
-        double[] y = {coords[1] / 8.0 - 1 / 16.0 - 0.02,coords[1] / 8.0 - 1 / 16.0 - 0.02,coords[1] / 8.0 - 1 / 16.0 + 0.02};
-        StdDraw.filledPolygon(x, y);
+
+        if (StdDraw.getPenColor() == Color.WHITE) {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/knight_white.jpg", 0.1, 0.1);
+        } else {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/knight_black.jpg", 0.1, 0.1);
+        }
     }
     public boolean canMove(int col, int row){
         if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {

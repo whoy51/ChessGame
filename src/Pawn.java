@@ -16,10 +16,18 @@ public class Pawn extends Piece{
                 StdDraw.setPenColor(new Color(255, 204, 153));
             }
             StdDraw.filledSquare(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, 1 / 16.0);
-            if (white) {
-                StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Juan.jpg", 0.1, 0.1);
+            if (ChessGame.memeMode) {
+                if (white) {
+                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Ollie.jpg", 0.1, 0.1);
+                } else {
+                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Luther.jpg", 0.1, 0.1);
+                }
             } else {
-                StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Wesley.jpg", 0.1, 0.1);
+                if (white) {
+                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/pawn_white.jpg", 0.1, 0.1);
+                } else {
+                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/pawn_black.jpg", 0.1, 0.1);
+                }
             }
         } else if (type.equals("Bishop")) {
             if ((coords[0] + coords[1]) % 2 == 0){

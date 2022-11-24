@@ -8,8 +8,13 @@ public class ChessGame {
     public static boolean mousePressed = false;
     public static boolean selected = false;
     public static Turn turn = Turn.WHITE;
+    public static boolean memeMode = false;
 
     public static void main(String[] args) {
+        if (args.length > 0 && args[0].equals("true")){
+            memeMode = true;
+        }
+        StdDraw.setCanvasSize(700,700);
         StdDraw.setTitle("Turn: White");
         Board.init();
         Pawn whitePawn1 = new Pawn(1,2,true);

@@ -18,7 +18,11 @@ public class Rook extends Piece{
         } else {
             StdDraw.setPenColor(Color.BLACK);
         }
-        StdDraw.filledSquare(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, 0.02);
+        if (StdDraw.getPenColor() == Color.WHITE) {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/rook_white.jpg", 0.1, 0.1);
+        } else {
+            StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/rook_black.jpg", 0.1, 0.1);
+        }
     }
     public boolean canMove(int col, int row){
         if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
