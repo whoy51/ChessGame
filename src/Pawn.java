@@ -18,9 +18,9 @@ public class Pawn extends Piece{
             StdDraw.filledSquare(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, 1 / 16.0);
             if (ChessGame.memeMode) {
                 if (white) {
-                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Ollie.jpg", 0.1, 0.1);
+                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Juan.jpg", 0.1, 0.1);
                 } else {
-                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Luther.jpg", 0.1, 0.1);
+                    StdDraw.picture(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, "/resources/Wesley.jpg", 0.1, 0.1);
                 }
             } else {
                 if (white) {

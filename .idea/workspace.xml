@@ -4,23 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/src/resources/bishop_black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/bishop_white.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/king_black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/king_white.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/knight_black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/knight_white.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/pawn_black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/pawn_white.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/rook_black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/rook_white.jpg" afterDir="false" />
+    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="Pawns moving Properly">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChessGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/King.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +72,8 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -145,14 +139,42 @@
       <option name="project" value="LOCAL" />
       <updated>1669225469845</updated>
     </task>
-    <task id="LOCAL-00006" summary="more pictures">
-      <created>1669230914224</created>
+    <task id="LOCAL-00006" summary="SelectTile Works!">
+      <created>1669234815766</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1669230914224</updated>
+      <updated>1669234815766</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="We have click Movement def works">
+      <created>1669237332225</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669237332225</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Totally Playable">
+      <created>1669238485883</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669238485883</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Queen Movement done and selection fixed i think">
+      <created>1669247825507</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669247825507</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Pawns moving Properly">
+      <created>1669259584553</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669259584553</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +194,21 @@
     <MESSAGE value="Bug fixes and remove usused classes" />
     <MESSAGE value="Add pictures for king and queen" />
     <MESSAGE value="Test" />
-    <MESSAGE value="more pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="more pictures" />
+    <MESSAGE value="SelectTile Works!" />
+    <MESSAGE value="We have click Movement def works" />
+    <MESSAGE value="Totally Playable" />
+    <MESSAGE value="Queen Movement done and selection fixed i think" />
+    <MESSAGE value="Pawns moving Properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pawns moving Properly" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
