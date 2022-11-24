@@ -21,6 +21,7 @@ public class Piece {
             }
             StdDraw.filledSquare(oldC[0] / 8.0 - 1 / 16.0, oldC[1] / 8.0 - 1 / 16.0, 1/16.0);
             this.draw();
+            ChessGame.turn = (ChessGame.turn == Turn.WHITE)?Turn.BLACK : Turn.WHITE;
             return true;
         } else {
             return false;

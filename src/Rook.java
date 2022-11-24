@@ -20,6 +20,9 @@ public class Rook extends Piece{
         StdDraw.filledSquare(coords[0] / 8.0 - 1 / 16.0, coords[1] / 8.0 - 1 / 16.0, 0.02);
     }
     public boolean canMove(int col, int row){
+        if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
+            return false;
+        }
         //System.out.println("Testing");
         if (Math.abs(coords[0] - col) == 0){
             boolean occupied = false;

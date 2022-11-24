@@ -22,6 +22,9 @@ public class Knight extends Piece{
         StdDraw.filledPolygon(x, y);
     }
     public boolean canMove(int col, int row){
+        if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
+            return false;
+        }
         if ((Math.abs(coords[0] - col) == 1 && Math.abs(coords[1] - row) == 2) || (Math.abs(coords[0] - col) == 2 && Math.abs(coords[1] - row) == 1)){
             boolean occupied = false;
             for (int i = 0; i < 16; i++){

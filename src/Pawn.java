@@ -1,7 +1,6 @@
 import java.awt.Color;
 
 public class Pawn extends Piece{
-
     public Pawn(int col, int row, boolean whi) {
         super(col, row, whi);
     }
@@ -19,6 +18,23 @@ public class Pawn extends Piece{
         }
     }
      public boolean canMove(int col, int row) {
+        if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
+            return false;
+        }
+        if (tryMove(col, row)){
+            if (row == 8 && white){
+                System.out.println("White conversion");
+                ChessGame.all[0][col - 1] = new Queen(col, row, true);
+            }
+            if (row == 1 && !white){
+                System.out.println("Black conversion");
+                ChessGame.all[1][col - 1] = new Queen(col, row, false);
+            }
+            return true;
+        }
+        return false;
+     }
+     public boolean tryMove(int col, int row){
          if (Math.abs(coords[0] - col) == 0 && (coords[1] - row) == (white ? -1 : 1)) {
              boolean occupied = false;
              for (int j = 0; j < 2; j++) {
@@ -30,11 +46,11 @@ public class Pawn extends Piece{
                  }
              }
              if (!occupied) {
-                System.out.println("Can Move");
-                return true;
+                 System.out.println("Can Move");
+                 return true;
              } else {
-                System.out.println("Cannot Move");
-                return false;
+                 System.out.println("Cannot Move");
+                 return false;
              }
          } else if (Math.abs(coords[0] - col) == 0 && ((coords[1] - row) == (white? -2 : 2)) && coords [1] == (white? 2 : 7)){
              boolean occupied = false;

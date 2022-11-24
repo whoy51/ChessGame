@@ -7,6 +7,8 @@ public class ChessGame {
     public static int[] selectedTile = {-1,-1};
     public static boolean mousePressed = false;
     public static boolean selected = false;
+    public static Turn turn = Turn.WHITE;
+
     public static void main(String[] args) {
         Board.init();
         Pawn whitePawn1 = new Pawn(1,2,true);
@@ -136,4 +138,8 @@ public class ChessGame {
             selectTile(col, row);
         }
     }
+}
+enum Turn {
+    WHITE,
+    BLACK
 }

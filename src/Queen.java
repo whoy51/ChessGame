@@ -24,6 +24,9 @@ public class Queen extends Piece{
         }
     }
     public boolean canMove(int col, int row){
+        if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
+            return false;
+        }
         //System.out.println("Testing");
         if (Math.abs(coords[0] - col) == 0){
             boolean occupied = false;
