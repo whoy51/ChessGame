@@ -140,7 +140,3 @@ public class ChessGame {
         }
     }
 }
-enum Turn {
-    WHITE,
-    BLACK
-}
