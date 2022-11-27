@@ -29,7 +29,7 @@ public class Bishop extends Piece{
         if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
             return false;
         }
-        if (Math.abs(coords[0] - col) == Math.abs(coords[1] - row)){
+        if (Math.abs(coords[0] - col) == Math.abs(coords[1] - row) && Math.abs(coords[0] - col) > 0){
             boolean occupied = false;
             for (int i = 0; i < 16; i++){
                 int deltaX = (coords[0] - col > 0)? 1: -1;

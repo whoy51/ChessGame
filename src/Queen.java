@@ -29,18 +29,64 @@ public class Queen extends Piece{
             return false;
         }
         //System.out.println("Testing");
-        if (Math.abs(coords[0] - col) == 0){
+        if (Math.abs(coords[0] - col) == 0 && Math.abs(coords[1] - row) > 0){
+            //System.out.println("Hi");
+            boolean occupied = false;
+            for (int i = 0; i < 16; i++) {
+                if (row - coords[1] > 0) {
+                    for (int j = coords[1] + 1; j <= row; j++) {
+                        int[] checker = {col, j};
+                        //System.out.println("Checking " + checker[0] + ", " + checker[1]);
+                        if (ChessGame.all[white ? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white ? 0 : 1][i].coords[1] == checker[1]) {
+                            occupied = true;
+                            System.out.println("Occupied");
+                        }
+                    }
+                } else {
+                    for (int j = coords[1] - 1; j >= row; j--) {
+                        int[] checker = {col, j};
+                        System.out.println("Checking " + checker[0] + ", " + checker[1]);
+                        if (ChessGame.all[white ? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white ? 0 : 1][i].coords[1] == checker[1]) {
+                            occupied = true;
+                            System.out.println("Occupied");
+                        }
+                    }
+                }
+                if (occupied) {
+                    break;
+                }
+            }
+            if (!occupied){
+                System.out.println("Can Move");
+                return true;
+            } else {
+                System.out.println("Cannot Move");
+                return false;
+            }
+        } else if (Math.abs(coords[1] - row) == 0 && Math.abs(coords[0] - col) > 0){
+            //System.out.println("Hi");
             boolean occupied = false;
             for (int i = 0; i < 16; i++){
-                for (int j = coords[1] + 1; j <= row; j++) {
-                    int[] checker = {col, j};
-                    //System.out.println("Checking " + checker[0] + ", " + checker[1]);
-                    if (ChessGame.all[white? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white? 0 : 1][i].coords[1] == checker[1]){
-                        occupied = true;
-                        //System.out.println("Occupied");
-                        break;
-                    } else {
-                        occupied = false;
+                //System.out.println(i);
+                if (col - coords[0] > 0) {
+                    for (int j = coords[0] + 1; j <= col; j++) {
+                        //System.out.println("PLS");
+                        int[] checker = {j, row};
+                        //System.out.println("Checking " + checker[0] + ", " + checker[1]);
+                        if (ChessGame.all[white ? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white ? 0 : 1][i].coords[1] == checker[1]) {
+                            occupied = true;
+                            System.out.println("Occupied");
+                        }
+                    }
+                } else {
+                    for (int j = coords[0] - 1; j >= col; j--) {
+                        //System.out.println("PLS");
+                        int[] checker = {j, row};
+                        //System.out.println("Checking " + checker[0] + ", " + checker[1]);
+                        if (ChessGame.all[white ? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white ? 0 : 1][i].coords[1] == checker[1]) {
+                            occupied = true;
+                            System.out.println("Occupied");
+                        }
                     }
                 }
                 if (occupied){
@@ -54,32 +100,7 @@ public class Queen extends Piece{
                 System.out.println("Cannot Move");
                 return false;
             }
-        } else if (Math.abs(coords[1] - row) == 0) {
-            boolean occupied = false;
-            for (int i = 0; i < 16; i++) {
-                for (int j = coords[0] + 1; j <= col; j++) {
-                    int[] checker = {j, row};
-                    //System.out.println("Checking " + checker[0] + ", " + checker[1]);
-                    if (ChessGame.all[white ? 0 : 1][i].coords[0] == checker[0] && ChessGame.all[white ? 0 : 1][i].coords[1] == checker[1]) {
-                        occupied = true;
-                        //System.out.println("Occupied");
-                        break;
-                    } else {
-                        occupied = false;
-                    }
-                }
-                if (occupied) {
-                    break;
-                }
-            }
-            if (!occupied) {
-                System.out.println("Can Move");
-                return true;
-            } else {
-                System.out.println("Cannot Move");
-                return false;
-            }
-        } else if (Math.abs(coords[0] - col) == Math.abs(coords[1] - row)){
+        } else if (Math.abs(coords[0] - col) == Math.abs(coords[1] - row) && Math.abs(coords[0] - col) > 0){
             boolean occupied = false;
             for (int i = 0; i < 16; i++){
                 int deltaX = (coords[0] - col > 0)? 1: -1;
