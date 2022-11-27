@@ -38,8 +38,67 @@ public class King extends Piece{
         if ((ChessGame.turn == Turn.WHITE && !white) || (ChessGame.turn == Turn.BLACK && white)) {
             return false;
         }
-        //System.out.println("Testing");
-        if (Math.abs(coords[0] +- col) <= 1 && Math.abs(coords[1] - row) <= 1){
+        if (!hasMoved && col == 3){
+            boolean occupied = false;
+            for (int i = 0; i < 16; i++){
+                int[] checker = {col, row};
+                if ((ChessGame.all[white? 0 : 1][i].coords[0] > 1 && ChessGame.all[white? 0 : 1][i].coords[0] <= 4 )&& ChessGame.all[white? 0 : 1][i].coords[1] == checker[1]){
+                    System.out.println("Castle Fail");
+                    occupied = true;
+                }
+            }
+            if (!occupied){
+                if (!ChessGame.all[white? 0 : 1][8].hasMoved) {
+                    System.out.println("Can Move");
+                    ChessGame.all[white ? 0 : 1][8].move(4,row);
+                    if (ChessGame.turn == Turn.WHITE) {
+                        ChessGame.turn = Turn.BLACK;
+                        StdDraw.setTitle("Turn: Black");
+                    }else {
+                        ChessGame.turn = Turn.WHITE;
+                        StdDraw.setTitle("Turn: White");
+                    }
+                    return true;
+                } else {
+                    System.out.println("Rook Moved");
+                    return false;
+                }
+            } else {
+                System.out.println("Cannot Move");
+                return false;
+            }
+        }
+        if (!hasMoved && col == 7){
+            boolean occupied = false;
+            for (int i = 0; i < 16; i++){
+                int[] checker = {col, row};
+                if ((ChessGame.all[white? 0 : 1][i].coords[0] > 5 && ChessGame.all[white? 0 : 1][i].coords[0] < 8 )&& ChessGame.all[white? 0 : 1][i].coords[1] == checker[1]){
+                    System.out.println("Castle Fail");
+                    occupied = true;
+                }
+            }
+            if (!occupied){
+                if (!ChessGame.all[white? 0 : 1][9].hasMoved) {
+                    System.out.println("Can Move");
+                    ChessGame.all[white ? 0 : 1][9].move(6,row);
+                    if (ChessGame.turn == Turn.WHITE) {
+                        ChessGame.turn = Turn.BLACK;
+                        StdDraw.setTitle("Turn: Black");
+                    }else {
+                        ChessGame.turn = Turn.WHITE;
+                        StdDraw.setTitle("Turn: White");
+                    }
+                    return true;
+                } else {
+                    System.out.println("Rook Moved");
+                    return false;
+                }
+            } else {
+                System.out.println("Cannot Move");
+                return false;
+            }
+        }
+        if (Math.abs(coords[0] - col) <= 1 && Math.abs(coords[1] - row) <= 1){
             boolean occupied = false;
             for (int i = 0; i < 16; i++){
                 //System.out.println("Check iteration " + i);

@@ -6,12 +6,14 @@ public class Piece {
     //Coords is an int array storing column and row in that order ranging from 1 to 8
     public int[] coords = new int[2];
     public boolean white;
+    public boolean hasMoved;
     public void draw(){
 
     }
     public boolean move(int col, int row){
         System.out.println("Trying to move to " + col + ", " + row);
         if (this.canMove(col, row)){
+            hasMoved = true;
             //This takes pieces
             for (int i = 0; i < 16; i++) {
                 int[] checker = {col, row};
@@ -49,5 +51,6 @@ public class Piece {
         coords[0] = col;
         coords[1] = row;
         white = whi;
+        hasMoved = false;
     }
 }

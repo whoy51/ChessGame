@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="Queen Switch Fix">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="a0ea00df-6bb9-401e-a43d-22f32f3f7352" name="Changes" comment="Queen Bishop and Rook Turn Skipping and Cannibalism fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669265620587</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Queen Bishop and Rook Turn Skipping and Cannibalism fixed">
+      <created>1669523241023</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669523241023</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Queen Bishop and Rook Turn Skipping and Cannibalism fixed">
+      <created>1669523281959</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669523281959</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,7 +214,8 @@
     <MESSAGE value="Queen Movement done and selection fixed i think" />
     <MESSAGE value="Pawns moving Properly" />
     <MESSAGE value="Queen Switch Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Queen Switch Fix" />
+    <MESSAGE value="Queen Bishop and Rook Turn Skipping and Cannibalism fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Queen Bishop and Rook Turn Skipping and Cannibalism fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
